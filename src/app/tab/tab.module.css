@@ -64,12 +64,9 @@
     /* not show width */
     height: 0;
     /* not show height */
-    border-left: 200px solid transparent;
-    /*   */
-    border-right: 200px solid transparent;
-    /*   */
+    border-left: calc(16vw - 6px) solid transparent;
+    border-right: calc(16vw - 6px) solid transparent;
     border-top: 45px solid red;
-    /*   */
 }
 
 .contentTabs {
