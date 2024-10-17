@@ -19,15 +19,23 @@
     width: 33%;
     position: relative;
     /* Must add this */
+
+    height: 150px;
+    /* set height */
+    transition: height 0.3s;
+    /* animation */
 }
 
 .tabs:not(:last-child) {
-    border-right: 1px solid rgba(0, 0, 0, alpha0.274);
+    border-right: 1px solid rgba(0, 0, 0, 0.274);
 }
 
 .activeTabs {
     background: white;
     border-bottom: 1px solid transparent;
+    height: 200px;
+    padding: 15px 0;
+    /* add top and bottom padding */
 }
 
 .activeTabs::before {
@@ -40,6 +48,28 @@
     width: calc(100% + 2px);
     height: 5px;
     background: red;
+}
+
+
+.activeTabs::after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 100%;
+    /* bottom */
+    left: 50%;
+    transform: translateX(-50%);
+    /* center */
+    width: 0;
+    /* not show width */
+    height: 0;
+    /* not show height */
+    border-left: 200px solid transparent;
+    /*   */
+    border-right: 200px solid transparent;
+    /*   */
+    border-top: 45px solid red;
+    /*   */
 }
 
 .contentTabs {
@@ -79,4 +109,5 @@
 
 .blocTabs button {
     border: none;
+    position: relative;
 }
