@@ -16,13 +16,13 @@ const links: LinkInterface[] = [
     path: "/tab",
   },
   {
-    title: "Search",
-    path: "/search",
+    title: "Tab2",
+    path: "/tab2",
   },
 
   {
-    title: "Dropdown",
-    path: "/dropdown",
+    title: "Sidemenu",
+    path: "/sidemenu",
   },
 ];
 const Links = () => {
