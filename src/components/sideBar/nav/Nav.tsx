@@ -6,14 +6,14 @@ import * as FaIcons from 'react-icons/fa';
 import * as AiIcons from 'react-icons/ai';
 
 
-const Nav = () => {
+const Nav = ({showSidebar}:{showSidebar:() => void}) => {
   return (
     <div className={styles.container}>
-         <NavIcon href='#'>
-            <FaIcons.FaBars onClick={()=>{
-                console.log("works first")
-            }} />
-          </NavIcon>
+      <NavIcon href='#'>
+        <FaIcons.FaBars onClick={
+          showSidebar
+        } />
+      </NavIcon>
     </div>
   )
 }

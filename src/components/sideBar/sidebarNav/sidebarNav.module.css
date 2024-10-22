@@ -1,0 +1,16 @@
+.sidebarNav {
+    background: yellow;
+    width: 250px;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    position: fixed;
+    top: calc(100px + 80px);
+    left: -100%; /* default hide */
+    transition: left 350ms ease;
+    z-index: 10;
+  }
+  
+  .active {
+    left: 0; /* when sidebar is true, showing */
+  }

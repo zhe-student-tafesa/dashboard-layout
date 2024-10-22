@@ -16,10 +16,10 @@ interface SubNavItem {
     cName?: string;
 }
 
-interface SidebarItem {
+export interface SidebarItem {
     title: string;
     path: string;
-    icon: React.ComponentType;
+    icon?: React.ComponentType;
     iconClosed?: React.ComponentType;
     iconOpened?: React.ComponentType;
     subNav?: SubNavItem[];
