@@ -10,11 +10,11 @@ interface SubMenuProps {
 
 const SubMenu: React.FC<SubMenuProps> = ({ item }) => {
   const [subnav, setSubnav] = useState(false);
-
   const showSubnav = () => setSubnav(!subnav);
+
   return (
     <>
-      <Link href={item.path} passHref>
+      <Link href={"#"} passHref>
         <div className={styles.sidebarLink} onClick={item.subNav ? showSubnav : undefined}>
           <div>
             {item.icon && <item.icon />} {/* make sure icon exist */}
