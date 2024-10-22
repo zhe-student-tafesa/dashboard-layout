@@ -19,9 +19,11 @@ const SidebarNav: React.FC<SidebarNavProps> = ({ sidebar, showSidebar }) => {
                 <NavIcon href='#'>
                     <AiIcons.AiOutlineClose onClick={showSidebar} />
                 </NavIcon>
-                {SidebarData.map((item, index) => {
-                return <SubMenu item={item} key={index} />;
-            })}
+                {
+                    SidebarData.map((item, index) => {
+                        return <SubMenu item={item} key={index} />;
+                    })
+                }
             </SidebarWrap>
         </nav>
     );

@@ -20,6 +20,7 @@ const SubMenu: React.FC<SubMenuProps> = ({ item }) => {
             {item.icon && <item.icon />} {/* make sure icon exist */}
             <span className={styles.sidebarLabel}>{item.title}</span>
           </div>
+          {/* if has submenu, show arrow in the right: when iconClosed, use RiIcons.RiArrowDownSFill */}
           <div>
             {item.subNav && subnav
               ? item.iconOpened && <item.iconOpened />
@@ -29,7 +30,10 @@ const SubMenu: React.FC<SubMenuProps> = ({ item }) => {
           </div>
         </div>
       </Link>
-      {subnav &&
+
+      {/* Sub menu */}
+      {
+        subnav &&
         item.subNav?.map((subItem, index) => (
           <Link href={subItem.path} key={index} passHref>
             <div className={styles.dropdownLink}>
@@ -37,7 +41,8 @@ const SubMenu: React.FC<SubMenuProps> = ({ item }) => {
               <span className={styles.sidebarLabel}>{subItem.title}</span>
             </div>
           </Link>
-        ))}
+        ))
+      }
     </>
   );
 }
