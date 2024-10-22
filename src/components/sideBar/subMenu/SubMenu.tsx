@@ -14,7 +14,7 @@ const SubMenu: React.FC<SubMenuProps> = ({ item }) => {
 
   return (
     <>
-      <Link href={"#"} passHref>
+      <Link href={item.subNav == null ? item.path : "#"} passHref>
         <div className={styles.sidebarLink} onClick={item.subNav ? showSubnav : undefined}>
           <div>
             {item.icon && <item.icon />} {/* make sure icon exist */}
